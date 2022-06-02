@@ -14,14 +14,14 @@ if __name__ == '__main__':
 
     for i in s:
         p = 0
-        for k in range(len(i)):
+        for k, item in enumerate(i):
             if i[k] in i[:k]:
                 p += 1
         if p == 0:
             wr.append(i)
 
         q = 0
-        for k in range(len(i)//2):
+        for k,item in enumerate(i):
             if i[k] != i[-k - 1]:
                 q += 1
         if q == 0:
